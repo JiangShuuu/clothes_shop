@@ -66,50 +66,83 @@ export default {
 .container {
   @include flexCenter;
   .main {
-    width: 80%;
+    width: 100%;
+    @include pad {
+      width: 85%;
+    }
+    @include web {
+      width: 80%;
+    }
     .ban_img {
       width: 100%;
-      height: 50vh;
+      height: 25vh;
       background-color: red;
       overflow: hidden;
       position: relative;
+      @include pad {
+        height: 35vh;
+        margin-top: 3rem;
+      }
+      @include web {
+        height: 45vh;
+      }
+
       img {
         width: 100%;
-        height: 100%;
+        height: 25vh;
+        object-fit: cover;
+        @include pad {
+          height: 35vh;
+        }
+        @include web {
+          height: 45vh;
+        }
       }
     }
     .next {
       position: absolute;
-      top: 50%;
+      top: 40%;
       right: 0;
       color: $mid-gray;
       text-align: center;
       opacity: 0.65;
       cursor: pointer;
+      @include web {
+        top: 45%;
+      }
       &:hover {
         color: white;
       }
       .fa-angle-right {
-        width: 50px;
-        height: 50px;
-        padding-left: 5px;
+        width: 40px;
+        height: 40px;
+        @include pad {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
     .prev {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 0;
       color: $mid-gray;
       text-align: center;
       opacity: 0.65;
       cursor: pointer;
+      @include web {
+        top: 45%;
+      }
       &:hover {
         color: white;
       }
       .fa-angle-left {
-        width: 50px;
-        height: 50px;
-        padding-left: 5px;
+        width: 40px;
+        height: 40px;
+        @include pad {
+          width: 50px;
+          height: 50px;
+        }
       }
     }
     .page {

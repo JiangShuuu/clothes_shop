@@ -140,7 +140,7 @@ export default {
         .content_list {
           &_background {
             position: absolute;
-            top: 3.8rem;
+            top: 4rem;
             left: 0;
             width: 100%;
             height: 100vh;
@@ -196,7 +196,10 @@ export default {
             cursor: pointer;
             &:hover {
               color: $main-blue;
-              border-bottom: 1px solid;
+              text-decoration: underline 1px solid $main-blue;
+              text-underline-offset: 3px;
+              text-decoration-thickness: 3px;
+              transform: 0.5s;
               border-width: 2px;
             }
           }
