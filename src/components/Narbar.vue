@@ -314,7 +314,7 @@ export default {
     background: white;
     z-index: 2;
     .icon_btns {
-      box-shadow: 0px 0px 1px 1px $mid-gray;
+      // box-shadow: 0px 0px 1px 1px $mid-gray;
       @include flexCenter;
       justify-content: space-around;
       &_btn {

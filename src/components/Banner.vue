@@ -36,7 +36,7 @@ export default {
     };
   },
   created() {
-    window.setInterval(this.next, 3000);
+    window.setInterval(this.next, 2000);
   },
   methods: {
     next() {
@@ -67,9 +67,9 @@ export default {
   @include flexCenter;
   .main {
     width: 100%;
-    @include pad {
-      width: 85%;
-    }
+    // @include pad {
+    //   width: 85%;
+    // }
     // @include web {
     //   width: 80%;
     // }

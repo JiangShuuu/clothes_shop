@@ -14,6 +14,16 @@
           <li><i class="fas fa-angle-double-down"></i></li>
           <span>熱銷上衣</span>
         </div>
+        <div class="main_cards_card">
+          <img src="./../assets/Image/coat01.jpg" alt="" />
+          <li><i class="fas fa-angle-double-down"></i></li>
+          <span>精選外套</span>
+        </div>
+        <div class="main_cards_card">
+          <img src="./../assets/Image/pants.jpg" alt="" />
+          <li><i class="fas fa-angle-double-down"></i></li>
+          <span>經款褲款</span>
+        </div>
       </div>
     </div>
   </div>
@@ -51,8 +61,8 @@ export default {
       margin: 0.5rem 0;
       padding: 1rem 0;
       &_caption {
-        font-weight: 900;
-        font-size: 1.15em;
+        font-weight: 700;
+        font-size: 1.2em;
       }
       &_line {
         height: 1px;
@@ -62,7 +72,7 @@ export default {
       }
       &_text {
         font-size: 12px;
-        font-weight: 200;
+        color: darken($mid-gray, 20%);
       }
     }
     &_cards {
@@ -73,22 +83,45 @@ export default {
         height: 20rem;
         position: relative;
         overflow: hidden;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin: 0.25rem 0;
         img {
           object-fit: cover;
           width: 100%;
           height: 120%;
+          transform: scale(1, 1);
+          transition: all 1s ease-out;
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
         }
         li {
           position: absolute;
-          top: 50%;
+          top: 40%;
           left: 50%;
           transform: translate(-50%, -50%);
+          display: inline-block;
+          animation: animate 2s ease-in-out infinite;
+        }
+        @keyframes animate {
+          0% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-15px);
+          }
+          100% {
+            transform: translateY(0px);
+          }
         }
         span {
           position: absolute;
-          top: 58%;
+          top: 55%;
           left: 50%;
           transform: translate(-50%, -50%);
+          font-weight: 700;
         }
       }
     }
