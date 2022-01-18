@@ -6,18 +6,22 @@
       </div>
       <div class="main_content">
         <div class="main_content_mobile">
-          <label class="nav_toggle-label" v-if="isNavOpen" @click="closeNav()">
+          <!-- <label class="nav_toggle-label" v-if="isNavOpen" @click="closeNav()">
             <li class="content_btn_close">
               <i class="fas fa-times"></i>
             </li>
-          </label>
-          <label class="nav_toggle-label" v-else @click="openNav()">
+          </label> -->
+          <!-- <label class="nav_toggle-label" v-else @click="openNav()">
             <li class="content_btn_open">
               <i class="fas fa-bars"></i>
             </li>
+          </label> -->
+          <label for="navbar-toggle" class="nav_taggle-label">
+            <span class="hamburger"></span>
           </label>
-          <div class="content_list" v-if="isNavOpen">
-            <div class="content_list_background" @click="closeNav()"></div>
+          <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
+          <div class="content_list">
+            <div class="content_list_background"></div>
             <ul class="content_list_items">
               <li class="content_list_item">首頁</li>
               <li class="content_list_item">所有商品</li>
@@ -138,6 +142,13 @@ export default {
           display: none;
         }
         .content_list {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          transform: scale(0, 1);
+          transform-origin: left;
+          transition: transform 0.3s ease-out;
           &_background {
             position: absolute;
             top: 4rem;
@@ -156,11 +167,12 @@ export default {
             z-index: 1;
             background: white;
             text-align: center;
+            opacity: 0;
           }
           &_item {
             padding-top: 1rem;
             cursor: pointer;
-            transition: 0.5s;
+            transition: transform 0.2s ease-out;
             &:hover {
               text-decoration: underline $main-blue;
               text-decoration-thickness: 2px;
@@ -168,19 +180,47 @@ export default {
             }
           }
         }
-        .nav_toggle-label {
+        .nav_taggle-label {
           position: absolute;
-          top: 18px;
+          top: 1.5rem;
           left: 15px;
           cursor: pointer;
-          .fa-bars {
-            width: 25px;
-            height: 25px;
+          display: flex;
+          align-items: center;
+          .hamburger {
+            position: relative;
           }
-          .fa-times {
+          .hamburger,
+          .hamburger::before,
+          .hamburger::after {
             width: 25px;
-            height: 25px;
+            height: 3px;
+            background: black;
+            margin: 0.2rem 0;
           }
+          .hamburger::before,
+          .hamburger::after {
+            position: absolute;
+            content: "";
+            left: 0;
+          }
+          .hamburger::before {
+            top: 5px;
+          }
+          .hamburger::after {
+            bottom: 5px;
+          }
+        }
+        .navbar-toggle {
+          visibility: hidden;
+          display: none;
+        }
+        .navbar-toggle:checked ~ .content_list {
+          transform: scale(1, 1);
+        }
+        .navbar-toggle:checked ~ .content_list .content_list_items {
+          transition: opacity 0.3s ease-out 0.15s;
+          opacity: 1;
         }
       }
       &_web {

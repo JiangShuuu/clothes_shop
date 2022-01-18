@@ -70,18 +70,17 @@ export default {
     @include pad {
       width: 85%;
     }
-    @include web {
-      width: 80%;
-    }
+    // @include web {
+    //   width: 80%;
+    // }
     .ban_img {
       width: 100%;
       height: 25vh;
-      background-color: red;
       overflow: hidden;
       position: relative;
       @include pad {
         height: 35vh;
-        margin-top: 3rem;
+        margin-top: 2.5rem;
       }
       @include web {
         height: 45vh;
