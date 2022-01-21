@@ -25,6 +25,19 @@
           <span>經款褲款</span>
         </div>
       </div>
+
+      <div class="main_shop">
+        <div class="main_shop_img">
+          <img src="./../assets/Image/shop01.jpg" alt="" />
+        </div>
+        <div class="main_shop_script">
+          <span class="title"> 質感日系時尚 </span>
+          <span>自分に忠実 !</span>
+          <span>我們希望創造一個優質空間</span>
+          <span>讓每個前來的你們，都能穿出屬於自己的日系獨特風格。</span>
+          <button>SHOP NOW</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -92,7 +105,7 @@ export default {
           width: 100%;
           height: 120%;
           transform: scale(1, 1);
-          transition: all 1s ease-out;
+          transition: transform 1s ease-out;
           &:hover {
             transform: scale(1.1, 1.1);
           }
@@ -124,6 +137,52 @@ export default {
           font-weight: 700;
         }
       }
+    }
+    &_shop {
+      @include flexCenter;
+      flex-direction: column;
+      &_img {
+        width: 95%;
+        height: 35vh;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          transform: scale(1, 1);
+          transition: transform 1s ease-out;
+          cursor: pointer;
+          &:hover {
+            transform: scale(1.1, 1.1);
+          }
+        }
+      }
+      &_script {
+        @include flexCenter;
+        flex-direction: column;
+        margin-top: 1rem;
+        span {
+          margin: 0.15rem;
+          font-size: 14px;
+        }
+        .title {
+          font-weight: 900;
+          font-size: 18px;
+        }
+        button {
+          all: unset;
+          border: 1px solid;
+          margin-top: 0.5rem;
+          padding: 0.35rem 1rem;
+          font-size: 15px;
+          &:hover {
+            background: $main-blue;
+            color: white;
+            transition: all 0.35s ease-out;
+          }
+        }
+      }
+      padding-bottom: 8rem;
     }
   }
 }
