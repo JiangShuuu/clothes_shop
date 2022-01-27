@@ -22,11 +22,14 @@
 </template>
 
 <script>
+import banner01 from "../assets/Image/Banner03.jpg";
+
 export default {
   name: "Banner",
   data() {
     return {
       imgArr: [
+        banner01,
         "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
         "https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
@@ -67,12 +70,6 @@ export default {
   @include flexCenter;
   .main {
     width: 100%;
-    // @include pad {
-    //   width: 85%;
-    // }
-    // @include web {
-    //   width: 80%;
-    // }
     .ban_img {
       width: 100%;
       height: 25vh;

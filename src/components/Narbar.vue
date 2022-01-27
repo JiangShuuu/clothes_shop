@@ -6,22 +6,17 @@
       </div>
       <div class="main_content">
         <div class="main_content_mobile">
-          <!-- <label class="nav_toggle-label" v-if="isNavOpen" @click="closeNav()">
-            <li class="content_btn_close">
-              <i class="fas fa-times"></i>
-            </li>
-          </label> -->
-          <!-- <label class="nav_toggle-label" v-else @click="openNav()">
-            <li class="content_btn_open">
-              <i class="fas fa-bars"></i>
-            </li>
-          </label> -->
           <label for="navbar-toggle" class="nav_taggle-label">
             <span class="hamburger"></span>
           </label>
-          <input type="checkbox" class="navbar-toggle" id="navbar-toggle" />
+          <input
+            type="checkbox"
+            class="navbar-toggle"
+            id="navbar-toggle"
+            v-model="isOpen"
+          />
           <div class="content_list">
-            <div class="content_list_background"></div>
+            <div class="content_list_background" @click="checkClose()"></div>
             <ul class="content_list_items">
               <li class="content_list_item">首頁</li>
               <li class="content_list_item">所有商品</li>
@@ -97,7 +92,7 @@ export default {
   data() {
     return {
       router: "",
-      isNavOpen: false,
+      isOpen: false,
     };
   },
   watch: {
@@ -108,11 +103,8 @@ export default {
     },
   },
   methods: {
-    closeNav() {
-      this.isNavOpen = false;
-    },
-    openNav() {
-      this.isNavOpen = true;
+    checkClose() {
+      this.isOpen = !this.isOpen;
     },
   },
 };
