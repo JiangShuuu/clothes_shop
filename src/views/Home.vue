@@ -246,7 +246,10 @@ export default {
         height: 100%;
         overflow: hidden;
         img {
-          width: 60%;
+          width: 80%;
+          @include pad {
+            width: 60%;
+          }
         }
       }
       &_img02 {
@@ -256,6 +259,9 @@ export default {
         overflow: hidden;
         img {
           width: 70%;
+          @include pad {
+            width: 60%;
+          }
         }
         position: absolute;
         top: 0;
@@ -290,18 +296,21 @@ export default {
             justify-content: space-between;
             width: 70%;
             margin: 1rem 0;
+            @include pad {
+              width: 65%;
+            }
+            @include web {
+              width: 60%;
+            }
             input {
               @include pad {
                 width: 65%;
                 padding-left: 2rem;
               }
-              @include web {
-                width: 70%;
-              }
               all: unset;
               color: black;
               text-align: left;
-              width: 60%;
+              width: 50%;
               padding: 0.75rem;
               background: white;
               border-radius: 25px 0 0 25px;
