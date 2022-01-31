@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="contain">
     <div class="main">
       <div class="main_logo">
         <img src="./../assets/Icon/LogoBA.png" alt="" />
@@ -40,9 +40,9 @@
       </div>
       <div class="main_icon">
         <ul class="icon_btns">
-          <li class="icon_btns_btn icon active">
+          <router-link to="/signIn" class="icon_btns_btn icon active">
             <i class="far fa-user-circle"></i>
-          </li>
+          </router-link>
           <li class="icon_btns_btn icon">
             <i class="fas fa-shopping-bag"></i>
           </li>
@@ -113,7 +113,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/All.scss";
 
-.container {
+.contain {
   background: white;
   position: fixed;
   width: 100%;

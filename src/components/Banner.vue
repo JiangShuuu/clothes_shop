@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="contain">
     <div class="main">
       <div class="ban_img">
         <li class="prev" @click="prev"><i class="fas fa-angle-left"></i></li>
@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/All.scss";
 
-.container {
+.contain {
   @include flexCenter;
   .main {
     width: 100%;

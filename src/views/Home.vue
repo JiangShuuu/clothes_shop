@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="contain">
     <div class="main">
       <Banner />
       <div class="main_title">
@@ -87,7 +87,7 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/All.scss";
 
-.container {
+.contain {
   width: 100%;
   padding-top: 2rem;
   @include flexCenter;
@@ -236,7 +236,7 @@ export default {
     &_subscript {
       position: relative;
       width: 100%;
-      height: 40vh;
+      height: 50vh;
       margin-top: 2rem;
       @include pad {
         margin-top: 0.5rem;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="contain">
     <div class="main">
       <div class="main_content">
         <div class="main_content_logo">
@@ -54,15 +54,13 @@
 
 <style lang="scss" scoped>
 @import "../assets/scss/All.scss";
-.container {
+.contain {
   @include mobile {
     display: none;
   }
-  width: 100%;
-  height: 100%;
-  background: white;
-  z-index: 2;
   .main {
+    background: white;
+    z-index: 2;
     width: 100%;
     @include flexCenter;
     flex-direction: column;

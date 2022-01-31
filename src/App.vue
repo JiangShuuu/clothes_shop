@@ -7,8 +7,10 @@
 </template>
 
 <script>
-import Navbar from "./components/Narbar.vue";
+import Navbar from "./components/Navbar.vue";
 import Footer from "./components/Footer.vue";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export default {
   name: "app",
   components: {
