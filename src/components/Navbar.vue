@@ -143,7 +143,7 @@ export default {
           transition: transform 0.3s ease-out;
           &_background {
             position: absolute;
-            top: 4rem;
+            top: 3.5rem;
             left: 0;
             width: 100%;
             height: 100vh;
@@ -152,7 +152,7 @@ export default {
           }
           &_items {
             position: absolute;
-            top: 3.8rem;
+            top: 3.5rem;
             left: 0;
             width: 40%;
             min-height: 100vh;
