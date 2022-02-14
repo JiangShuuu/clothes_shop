@@ -1,5 +1,7 @@
 # clothes_shop
 
+Demo：https://jiangshuuu.github.io/clothes_shop/
+
 ## Project setup
 ```
 npm install
